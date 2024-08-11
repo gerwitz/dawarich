@@ -69,16 +69,13 @@ services:
     command: ['sidekiq']
     restart: on-failure
     environment:
-      RAILS_ENV: development
+      RAILS_ENV: production
       REDIS_URL: redis://dawarich_redis:6379/0
       DATABASE_HOST: dawarich_db
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: password
-      DATABASE_NAME: dawarich_development
-      APPLICATION_HOST: localhost
-      APPLICATION_HOSTS: localhost
+      DATABASE_NAME: dawarich
       BACKGROUND_PROCESSING_CONCURRENCY: 10
-      APPLICATION_PROTOCOL: http
     logging:
       driver: "json-file"
       options:

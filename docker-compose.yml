@@ -36,7 +36,8 @@ services:
     command: ['bin/dev']
     restart: on-failure
     environment:
-      RAILS_ENV: production
+      RAILS_ENV: development
+      RAILS_DEVELOPMENT_HOSTS: "dawarich.coolify.gerwitz.com,dawarich.gerwitz.com"
       REDIS_URL: redis://dawarich_redis:6379/0
       DATABASE_HOST: dawarich_db
       DATABASE_USERNAME: postgres

@@ -29,7 +29,7 @@ services:
       POSTGRES_PASSWORD: password
     restart: always
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U postgres -d dawarich_development" ]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d dawarich_db" ]
       interval: 10s
       retries: 5
       start_period: 30s

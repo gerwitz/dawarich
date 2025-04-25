@@ -24,6 +24,8 @@ services:
       - dawarich_shared:/data
     networks:
       - dawarich
+    ports:
+      - 5432:5432
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: password

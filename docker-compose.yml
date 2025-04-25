@@ -29,7 +29,7 @@ services:
       POSTGRES_PASSWORD: password
     restart: always
     healthcheck:
-      test: [ "CMD-SHELL", "pg_isready -U postgres -d dawarich_db" ]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d dawarich" ]
       interval: 10s
       retries: 5
       start_period: 30s
@@ -114,7 +114,7 @@ services:
       DATABASE_HOST: dawarich_db
       DATABASE_USERNAME: postgres
       DATABASE_PASSWORD: password
-      DATABASE_NAME: dawarich_development
+      DATABASE_NAME: dawarich
     logging:
       driver: "json-file"
       options:
